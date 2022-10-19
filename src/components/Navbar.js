@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/Fidely.png"
 
 function Navbar(){
     return (
         <div>
-            <img src={logo} alt="logo Fidely" width="10%" />
+            <Link to="/"><img src={logo} alt="logo Fidely" width="10%" /></Link>
         </div>
     )
     
