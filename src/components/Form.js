@@ -1,13 +1,13 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
-
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 
 function Form({ inputs, validationSchema, type }) {
     
-    const { register, handleSubmit, formState, reset } = useForm({
+    const { register, handleSubmit, formState } = useForm({
         resolver: yupResolver(validationSchema),
     });
     
@@ -81,13 +81,7 @@ function Form({ inputs, validationSchema, type }) {
                             >
                                 S'inscrire
                             </button>
-                            <button
-                                type="button"
-                                className="btn btn-danger"
-                                onClick={() => reset()}
-                            >
-                                Annuler
-                            </button>
+                            <Link to="/" className="btn btn-danger text-decoration-none text-white">Annuler</Link>
                         </div>
                     </form>
                 </div>
