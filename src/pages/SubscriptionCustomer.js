@@ -1,6 +1,7 @@
 import Form from "../components/Form";
 import Navbar from "../components/Navbar"
 import * as Yup from "yup";
+import "../styles/SubscriptionCustomer.scss";
 
 const SubscriptionCustomer = () => {
 
@@ -10,14 +11,16 @@ const SubscriptionCustomer = () => {
             type: "text",
             label: "Nom",
             name: "lastname",
-            apiName: "lastname"
+            apiName: "lastname",
+            placeholder: "Descartes"
         },
         {
             id: 2,
             type: "text",
             label: "Prénom",
             name: "firstname",
-            apiName: "firstname"
+            apiName: "firstname",
+            placeholder: "Jean-Néplin"
         },
         {
             id: 3,
@@ -31,20 +34,23 @@ const SubscriptionCustomer = () => {
             type: "email",
             label: "Email",
             name: "email",
-            apiName: "mail"
+            apiName: "mail",
+            placeholder: "exemple@fidely.fr"
         },
         {
             id: 5,
             type: "password",
             label: "Mot de passe",
             name: "password",
-            apiName: "password"
+            apiName: "password",
+            placeholder: "N'oubliez pas le chiffre !"
         },
         {
             id: 6,
             type: "password",
             label: "Confirmation de mot de passe",
-            name: "confirmPassword"
+            name: "confirmPassword",
+            placeholder: "test"
         }
     ]
 
