@@ -79,7 +79,7 @@ const SubscriptionCustomer = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <Form inputs={inputsClient} validationSchema={validationSchema} />
+            <Form inputs={inputsClient} validationSchema={validationSchema} type="user" />
         </div>
     )
 }

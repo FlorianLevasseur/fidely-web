@@ -5,7 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 
 
-function Form({ inputs, validationSchema }) {
+function Form({ inputs, validationSchema, type }) {
     
     const { register, handleSubmit, formState, reset } = useForm({
         resolver: yupResolver(validationSchema),
@@ -22,7 +22,7 @@ function Form({ inputs, validationSchema }) {
             }
         })
         
-        axios.post('http://localhost:1234/user', add)
+        axios.post('http://localhost:1234/' + type, add)
             .then(response => {
                 console.log('User ajouté !')
                 document.getElementById("add").innerHTML += "<div style='color: green;' class='error'> Votre inscription a bien été prise en compte !</div>"
