@@ -36,7 +36,7 @@ function Form({ inputs, validationSchema, type }) {
     return (
         <div className="container pt-4">
             <div className="row">
-                <div className="col-md-6 offset-md-3">
+                <div>
                     <form onSubmit={handleSubmit(onSubmit)} id="add">
                         {inputs.map((inputC) => (
                             <div key={inputC.id} className="form-group mb-3">
@@ -74,7 +74,7 @@ function Form({ inputs, validationSchema, type }) {
                                 {errors.acceptTerms?.message}
                             </small>
                         </div>
-                        <div className="form-group d-flex justify-content-center mt-4 justify-content-md-end gap-3">
+                        <div className="form-group d-flex justify-content-center mt-4 justify-content-md-end gap-3" id="form-group-btns">
                             <button
                                 type="submit"
                                 className="btn btn-primary"

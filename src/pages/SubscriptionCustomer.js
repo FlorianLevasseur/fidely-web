@@ -1,7 +1,7 @@
 import Form from "../components/Form";
-import Navbar from "../components/Navbar"
 import * as Yup from "yup";
 import "../styles/SubscriptionCustomer.scss";
+import logo from "../assets/logo-white.png"
 
 const SubscriptionCustomer = () => {
 
@@ -43,14 +43,14 @@ const SubscriptionCustomer = () => {
             label: "Mot de passe",
             name: "password",
             apiName: "password",
-            placeholder: "N'oubliez pas le chiffre !"
+            placeholder: "••••••••••"
         },
         {
             id: 6,
             type: "password",
             label: "Confirmation de mot de passe",
             name: "confirmPassword",
-            placeholder: "test"
+            placeholder: "••••••••••"
         }
     ]
 
@@ -83,9 +83,16 @@ const SubscriptionCustomer = () => {
     });
 
     return (
-        <div>
-            <Navbar></Navbar>
-            <Form inputs={inputsClient} validationSchema={validationSchema} type="user" />
+        <div id='hero'>
+            <div id='leftHero'>
+                <img src={logo} width="400px"></img>
+                <h1>La carte qui vous relie à vos commerçants !</h1>
+                <p>Fidely est un portefeuille de carte de fidélités qui vous permet de toujours avoir sur vous toutes vos cartes. Avec Fidely, les cartes de fidélités perdues, c’est finis&nbsp;!</p>
+                <button>En savoir plus &#8594;</button>
+            </div>
+            <div id='rightHero'>
+                <Form inputs={inputsClient} validationSchema={validationSchema} type="user" />
+            </div>
         </div>
     )
 }
