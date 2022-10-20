@@ -2,7 +2,7 @@ import Form from "../components/Form";
 import Navbar from "../components/Navbar"
 import * as Yup from "yup";
 
-const SubscriptionCustomer = () => {
+const SubscriptionUser = () => {
 
     const inputsClient = [
         {
@@ -84,4 +84,4 @@ const SubscriptionCustomer = () => {
     )
 }
 
-export default SubscriptionCustomer
+export default SubscriptionUser

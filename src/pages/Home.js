@@ -5,7 +5,7 @@ const Home = () => {
       <nav>
         <ul className="list-unstyled">
           <li className="m-5">
-            <Link to="/subscriptionCustomer" className="btn btn-primary text-decoration-none text-white">Inscription Client</Link>
+            <Link to="/subscriptionUser" className="btn btn-primary text-decoration-none text-white">Inscription Client</Link>
           </li>
           <li className="m-5">
             <Link to="/" className="btn btn-primary text-decoration-none text-white">Accueil</Link>

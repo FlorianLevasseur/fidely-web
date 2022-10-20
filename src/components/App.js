@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import SubscriptionCustomer from "../pages/SubscriptionCustomer";
+import SubscriptionUser from "../pages/SubscriptionUser";
 
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/subscriptionCustomer" element={<SubscriptionCustomer />} />
+          <Route path="/subscriptionUser" element={<SubscriptionUser />} />
       </Routes>
     </BrowserRouter>
     
