@@ -39,7 +39,6 @@ function Form({ inputs, validationSchema, type }) {
             <div className="row">
                 <div>
                     <form onSubmit={handleSubmit(onSubmit)} id="add">
-                        <h1 className="text-center">Inscription</h1>
                         {inputs.map((inputC) => {
                             return inputC.type !== "select" ?
                                 <div key={inputC.id} className="form-group mb-3">
