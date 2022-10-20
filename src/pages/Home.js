@@ -15,6 +15,8 @@ const Home = () => {
         console.log(err)
       });
   }, []);
+
+  console.log(stores)
     
   return (
     <div>
@@ -24,13 +26,13 @@ const Home = () => {
             <Link to="/subscriptionUser" className="btn btn-primary text-decoration-none text-white">Inscription Client</Link>
           </li>
           <li className="m-5">
-            <Link to="/subscriptionStore" className="btn btn-primary text-decoration-none text-white">Inscription Commerce</Link>
+            <Link to="/" className="btn btn-primary text-decoration-none text-white">Accueil</Link>
           </li>
         </ul>
       </nav>
       <div>
-        {stores.map((store) =>
-          <div>
+        {stores?.map((store) =>
+          <div key={store.name}>
             <img src={defaultLogo} width="20rem" />
             <p>{store.name}</p>
           </div>
