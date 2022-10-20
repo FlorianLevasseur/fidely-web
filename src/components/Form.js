@@ -37,7 +37,7 @@ function Form({ inputs, validationSchema, type }) {
     return (
         <div className="container pt-4">
             <div className="row">
-                <div className="col-md-6 offset-md-3">
+                <div>
                     <form onSubmit={handleSubmit(onSubmit)} id="add">
                         <h1 className="text-center">Inscription</h1>
                         {inputs.map((inputC) => {
@@ -52,6 +52,7 @@ function Form({ inputs, validationSchema, type }) {
                                         {...register(inputC.name)}
                                         name={inputC.name}
                                         id={inputC.name}
+                                        placeholder={inputC.placeholder}
                                     />
                                     <small className="text-danger">
                                         {errors[inputC.name]?.message}
@@ -99,7 +100,7 @@ function Form({ inputs, validationSchema, type }) {
                                 {errors.acceptTerms?.message}
                             </small>
                         </div>
-                        <div className="form-group d-flex justify-content-center mt-4 justify-content-md-end gap-3">
+                        <div className="form-group d-flex justify-content-center mt-4 justify-content-md-end gap-3" id="form-group-btns">
                             <button
                                 type="submit"
                                 className="btn btn-primary"
