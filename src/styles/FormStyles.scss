@@ -1,23 +1,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-$primary-color : #0e6df0;
-
-
 * {
     font-family: 'Inter', sans-serif;
 
     body {
-        height: 200vh;
+        height: 100%;
+        width: 100%;
         background-image:  url(../assets/background.jpg);
         background-repeat: no-repeat;
-        background-size:contain;
+        background-size: cover;
         background-position:  top;
         // background-attachment: fixed;
 
 
         input {
-            color: #0e6df0;
+            color: #0e6df0 !important;
+            font-weight: 500!important;
             box-shadow: inset 1px 3px 6px #0075FF33;
             
         }
@@ -52,7 +51,7 @@ $primary-color : #0e6df0;
                     color: #ffffff;
                     font-size: 24px;
                     font-weight: 400;
-                    line-height: 24px;
+                    line-height: 26px;
                     padding-bottom: 2rem;
 
                 }
@@ -60,11 +59,14 @@ $primary-color : #0e6df0;
                     border: none;
                     border-radius: 6px;
                     color: #67778D;
-                    font-size: 26px;
+                    font-size: 24px;
                     font-weight: 600;
                     padding: 6px 20px;
                     transition: 0.3s ease;
                     width: 50%;
+                    transition: 0.33s ease;
+
+                    
                 
               
                 }
@@ -74,7 +76,8 @@ $primary-color : #0e6df0;
                 height: 100%;
                 background-color: #ffffff80;
                 border-radius: 0 0 0 40px;
-                padding: 50px;
+                padding: 30px 45px;
+                overflow-y: scroll;
             }
         }
     }
@@ -83,6 +86,10 @@ $primary-color : #0e6df0;
 }
 .btn-primary {
     width: 100%;
+
+}
+.btn-primary:hover {
+    color: white !important;
 }
 .btn-danger {
     background-color: #ededed;
@@ -97,13 +104,13 @@ $primary-color : #0e6df0;
     border: none;
 }
 button:hover {
-        transition: 0.15s ease;
-        background-color: #989898;
-        color: #0e6df0;
+        background-color: #ffffff;
+        color: #0e6df0 !important;
     
 }
 input::placeholder {
-    color: #8596AE !important;    
+    color: #8596AE !important; 
+    font-weight: 400 !important;   
 }
 #form-group-btns {
     display: flex !important;

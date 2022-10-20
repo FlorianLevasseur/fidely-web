@@ -1,6 +1,6 @@
 import Form from "../components/Form";
 import * as Yup from "yup";
-import "../styles/SubscriptionCustomer.scss";
+import "../styles/FormStyles.scss";
 import logo from "../assets/logo-white.png"
 
 const SubscriptionUser = () => {
@@ -88,7 +88,7 @@ const SubscriptionUser = () => {
                 <img src={logo} width="400px"></img>
                 <h1>La carte qui vous relie à vos commerçants !</h1>
                 <p>Fidely est un portefeuille de carte de fidélités qui vous permet de toujours avoir sur vous toutes vos cartes. Avec Fidely, les cartes de fidélités perdues, c’est finis&nbsp;!</p>
-                <button>En savoir plus &#8594;</button>
+                <button>En savoir plus </button>
             </div>
             <div id='rightHero'>
                 <Form inputs={inputsClient} validationSchema={validationSchema} type="users" />

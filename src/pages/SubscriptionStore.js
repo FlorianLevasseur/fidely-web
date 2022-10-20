@@ -1,6 +1,7 @@
 import Form from "../components/Form";
-import Navbar from "../components/Navbar"
 import * as Yup from "yup";
+import "../styles/FormStyles.scss";
+import logo from "../assets/logo-white.png"
 
 const SubscriptionStore = () => {
 
@@ -46,11 +47,23 @@ const SubscriptionStore = () => {
                 },
                 {
                     id: 52,
-                    name: 'Boulangerie'
+                    name: 'Fast-food'
                 },
                 {
                     id: 53,
+                    name: 'Boulangerie'
+                },
+                {
+                    id: 54,
+                    name: 'Librairie'
+                },
+                {
+                    id: 55,
                     name: 'Fleuriste'
+                },
+                {
+                    id: 56,
+                    name: 'Primeur'
                 }
             ]
         },
@@ -72,14 +85,14 @@ const SubscriptionStore = () => {
         {
             id: 8,
             type: "password",
-            label: "Mode de passe",
+            label: "Mot de passe",
             name: "password",
             apiName: "password"
         },
         {
             id: 9,
             type: "password",
-            label: "Confirmation de mot de passe",
+            label: "Confirmation du mot de passe",
             name: "confirmPassword"
         }
     ]
@@ -119,9 +132,17 @@ const SubscriptionStore = () => {
     });
 
     return (
-        <div>
-            <Navbar></Navbar>
-            <Form inputs={inputsStores} validationSchema={validationSchema} type="store" />
+        <div id='hero'>
+            
+            <div id='leftHero'>
+                <img src={logo} width="400px"></img>
+                <h1>L'appli qui vous relie à vos clients !</h1>
+                <p>Fidely vous permet de faire parti d'un réseau de commerçants locaux. Grâce à nous multipliez vos client et récompensez leur fidélité&nbsp;!</p>
+                <button>En savoir plus </button>
+            </div>
+            <div id='rightHero'>
+                <Form inputs={inputsStores} validationSchema={validationSchema} type="store" />
+            </div>
         </div>
     )
 }

@@ -106,7 +106,7 @@ function Form({ inputs, validationSchema, type }) {
                             >
                                 S'inscrire
                             </button>
-                            <Link to="/" className="btn btn-danger text-decoration-none text-white">Annuler</Link>
+                            <Link to="/" className="btn btn-danger text-decoration-none text-white">Retour</Link>
                         </div>
                     </form>
                 </div>
