@@ -22,7 +22,7 @@ function Form({ inputs, validationSchema, type }) {
             }
         })
         
-        axios.post('http://localhost:1234/' + type, add)
+        axios.post('http://localhost:4000/' + type, add)
             .then(response => {
                 console.log('User ajouté !')
                 document.getElementById("add").innerHTML += "<div style='color: green;' class='error'> Votre inscription a bien été prise en compte !</div>"
