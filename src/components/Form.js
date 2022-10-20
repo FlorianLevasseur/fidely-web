@@ -18,13 +18,14 @@ function Form({ inputs, validationSchema, type }) {
         const add = {}
         inputs.map((input) => {
             if(input.apiName){
-                add[input.apiName] = data[input.name]
+                return (add[input.apiName] = data[input.name])
             }
+            return null
         })
         
         axios.post('http://localhost:4000/' + type, add)
             .then(response => {
-                console.log('User ajouté !')
+                console.log('Add effectué !')
                 document.getElementById("add").innerHTML += "<div style='color: green;' class='error'> Votre inscription a bien été prise en compte !</div>"
             })
             .catch(err => {
@@ -39,23 +40,47 @@ function Form({ inputs, validationSchema, type }) {
                 <div className="col-md-6 offset-md-3">
                     <form onSubmit={handleSubmit(onSubmit)} id="add">
                         <h1 className="text-center">Inscription</h1>
-                        {inputs.map((inputC) => (
+                        {inputs.map((inputC) => {
+                            return inputC.type !== "select" ?
+                                <div key={inputC.id} className="form-group mb-3">
+                                    <label htmlFor={inputC.name}>
+                                        {inputC.label}
+                                    </label>
+                                    <input
+                                        type={inputC.type}
+                                        className="form-control"
+                                        {...register(inputC.name)}
+                                        name={inputC.name}
+                                        id={inputC.name}
+                                    />
+                                    <small className="text-danger">
+                                        {errors[inputC.name]?.message}
+                                    </small>
+                                </div>
+                            :
                             <div key={inputC.id} className="form-group mb-3">
                                 <label htmlFor={inputC.name}>
                                     {inputC.label}
                                 </label>
-                                <input
-                                    type={inputC.type}
+                                <select
                                     className="form-control"
                                     {...register(inputC.name)}
                                     name={inputC.name}
                                     id={inputC.name}
-                                />
+                                    defaultValue=""
+                                ><option value="" disabled>---</option>
+                                {inputC.options.map((inputType) => {
+                                    return <option key = {inputType.id} value={inputType.name}>{inputType.name}</option>
+                                })}
+                                    
+                                </select>
                                 <small className="text-danger">
                                     {errors[inputC.name]?.message}
                                 </small>
                             </div>
-                        ))}
+                        }
+                            
+                        )}
                         <div className="form-check">
                             <label
                                 htmlFor="acceptTerms"
