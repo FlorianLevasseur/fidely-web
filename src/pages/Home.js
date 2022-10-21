@@ -20,7 +20,7 @@ const Home = () => {
       });
   }, []);
 
-  console.log(stores)
+  console.log(sessionStorage)
   
   function deconnexion(){
     sessionStorage.clear();
