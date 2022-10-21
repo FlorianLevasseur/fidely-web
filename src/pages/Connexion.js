@@ -45,7 +45,7 @@ const Connexion = () => {
             .catch(err => {
                 var dom = document.createElement('div')
                 dom.innerHTML = err.response.data
-                setFormErrors(dom.lastElementChild.lastChild.data)
+                setFormErrors(dom.lastChild.data)
             })
     }
 
