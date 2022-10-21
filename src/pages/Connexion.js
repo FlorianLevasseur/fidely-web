@@ -36,7 +36,10 @@ const Connexion = () => {
         })
             .then(response => {
                 console.log('Login correct !')
+                console.log(response);
                 sessionStorage.setItem("token", response.data.token);
+                sessionStorage.setItem("_id", response.data._id);
+                sessionStorage.setItem("firstname", response.data.firstname);
                 navigate('/');
             })
             .catch(err => {

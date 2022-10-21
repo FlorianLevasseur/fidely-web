@@ -17,10 +17,15 @@ const Home = () => {
   }, []);
 
   console.log(stores)
-    
+  
+  function deconnexion(){
+    sessionStorage.clear();
+    window.location.reload(false);
+  }
+
   return (
     <div>
-      {sessionStorage.getItem("token") != null ? <div>Bonjour</div> : ""}
+      {sessionStorage.getItem("token") != null ? <div>Bonjour {sessionStorage.getItem("firstname")} <button type="submit" onClick={deconnexion}>Déconnexion</button></div> : ""}
       <nav>
         <ul className="list-unstyled">
           <li className="m-5">
