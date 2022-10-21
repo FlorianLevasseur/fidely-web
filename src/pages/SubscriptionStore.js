@@ -132,16 +132,17 @@ const SubscriptionStore = () => {
     });
 
     return (
-        <div id='hero'>
-            
-            <div id='leftHero'>
-                <img src={logo} width="400px"></img>
-                <h1>L'appli qui vous relie à vos clients !</h1>
-                <p>Fidely vous permet de faire parti d'un réseau de commerçants locaux. Grâce à nous multipliez vos client et récompensez leur fidélité&nbsp;!</p>
-                <button>En savoir plus </button>
-            </div>
-            <div id='rightHero'>
-                <Form inputs={inputsStores} validationSchema={validationSchema} type="store" />
+        <div id="subscription">
+            <div id='hero'>
+                <div id='leftHero'>
+                    <img src={logo} width="400px"></img>
+                    <h1>L'appli qui vous relie à vos clients !</h1>
+                    <p>Fidely vous permet de faire parti d'un réseau de commerçants locaux. Grâce à nous multipliez vos client et récompensez leur fidélité&nbsp;!</p>
+                    <button>En savoir plus </button>
+                </div>
+                <div id='rightHero'>
+                    <Form inputs={inputsStores} validationSchema={validationSchema} type="store" />
+                </div>
             </div>
         </div>
     )

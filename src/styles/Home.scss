@@ -1,0 +1,109 @@
+body {
+    #home {
+        #hero {
+            height: 100vh;
+            background-image: url(../assets/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:  top;
+            margin-bottom: 3rem;
+            display: flex;
+            color: white;
+
+            #heroLeft {
+                width: 60vw;
+                height: 100vh;
+                padding: 5vw 5vw 5vw 10vw;
+                display: flex;
+                justify-content: center;
+                align-items: left;
+                flex-direction: column;
+
+                @keyframes slideTop {
+                    0%   {top: -100%;}
+                    70% {top: 24%;}
+                    100% {top: 0%;}
+                  }
+                  @keyframes apear {
+                    0% {width: 0px;}
+                    100% {width: 400px;}
+                  }
+                img {
+                    position: relative;
+                    animation: apear 3.33s ease;
+                    animation-duration: 0.8s;
+                    animation-fill-mode: both;
+                }
+                p {
+                    position: relative;
+                    font-size: 24px;
+                    font-weight: 400;
+                    line-height: 1.75rem;
+                    animation: slideTop 1.33s ease;
+                    animation-duration: 0.59s;
+                    animation-delay: 1.23s;
+                    animation-fill-mode: both;
+                }
+                h1 {
+                    position: relative;
+                    font-size: 32px;
+                    font-weight: 700;
+                    animation: slideTop 1.33s ease;
+                    animation-duration: 0.75s;
+                    animation-delay: 0.55s;
+                    animation-fill-mode: both;
+                }
+            }
+            #heroRight {
+                width: 40vw;
+                justify-self: center;
+                align-self: center;
+                
+                @keyframes slideRight {
+                    from {right: -150%;}
+                    70% {right: 10%;}
+                    to {right: 0%;}
+                }
+                img {
+                    position: relative;
+                    animation: slideRight 1.33s ease;
+                    animation-fill-mode: both;
+                }
+            }
+
+        }
+        #introduction {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 7.5% 5% 7.5%;
+
+            .enTete {
+                padding-bottom: 3rem;
+            }
+            h2 {
+                color: #0e6df0;
+                font-size: 32px;
+                font-weight: 700;
+            }
+            
+            #sub {
+                display: flex;
+                flex-direction: row;
+                p{
+                    padding-bottom: 1.5rem;
+                }
+                #subUser {
+                    width: 50%;
+                    padding-right: 3%;
+                }
+                #subStore {
+                    width: 50%;
+                    padding-left: 3%;
+
+                }
+            }
+
+        }
+    }
+}
