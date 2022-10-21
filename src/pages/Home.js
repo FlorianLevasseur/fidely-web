@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <div id="home">
-      {sessionStorage.getItem("token") != null ? <div>Bonjour {sessionStorage.getItem("firstname")} <button type="submit" onClick={deconnexion}>Déconnexion</button></div> : ""}
+      {sessionStorage.getItem("token") != null ? <div id="login">Bonjour <b>{sessionStorage.getItem("firstname")}</b> <button type="submit" className="btn btn-primary" onClick={deconnexion}>Déconnexion</button></div> : ""}
       <div id="hero">
         <div id="heroLeft">
           <img src={logo} width="400px" />
@@ -52,12 +52,12 @@ const Home = () => {
             <p><b>En tant que commerçant,</b><br></br>Vous pouvez vous inscrire sur notre plateforme et proposer votre propre système de fidélité avec vos propres récompenses. Personnalisez votre offre de fidélité au maximum. Gagnez en visibilité locale grâce à notre système de mise en avant. Vous pouvez alerter vos clients de vos nouveautés et proposer des promotions directement sur notre application. Vos clients reçevrons des notifications directement sur leurs téléphones.<br></br><br></br>Suivez également votre activité et surveillez ce que votre système de fidélité vous rapporte comme bénéfice. Profitez de nos conseils pour optimiser votre système de fidélité pour attirer un maximum vos clients. Tout ça sans payer quoi que ce soit&nbsp;!</p>
             <Link to="/subscriptionStore" className="btn btn-primary text-decoration-none text-white">Inscription Commerce</Link>
           </div>
+        </div>
           <div className="m-5">
             <Link to="/connexion" className="btn btn-primary text-decoration-none text-white">Connexion</Link>
           </div>
-        </div>
       </div>
-      <div>
+      <div id="partners">
         {stores?.map((store) =>
           <div key={store.name}>
             <img src={defaultLogo} width="20rem" />

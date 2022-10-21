@@ -1,0 +1,41 @@
+body {
+
+}
+#connexions {
+    height: 100vh;
+    background-image:  url(../assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  top;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #modale {
+        background: #ffffff80;
+        padding: 5% 7%;
+        border-radius: 40px;
+
+        h1 {
+            font-size: 3rem;
+        }
+        input {
+            color: #0e6df0 !important;
+            border: 1px solid grey;
+            border-radius: 5px;
+            font-weight: 500!important;
+            box-shadow: inset 1px 3px 6px #0075FF33;
+            margin-bottom: 1rem;
+        }
+        button {
+            margin-bottom: 1rem;
+
+        }
+        label { 
+            color: #67778D;
+        }
+    }
+
+}
