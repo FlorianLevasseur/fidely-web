@@ -20,6 +20,7 @@ const Home = () => {
     
   return (
     <div>
+      {sessionStorage.getItem("token") != null ? <div>Bonjour</div> : ""}
       <nav>
         <ul className="list-unstyled">
           <li className="m-5">
@@ -27,6 +28,9 @@ const Home = () => {
           </li>
           <li className="m-5">
             <Link to="/subscriptionStore" className="btn btn-primary text-decoration-none text-white">Inscription Commerce</Link>
+          </li>
+          <li className="m-5">
+            <Link to="/connexion" className="btn btn-primary text-decoration-none text-white">Connexion</Link>
           </li>
         </ul>
       </nav>

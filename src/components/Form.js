@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import { useState } from 'react';
 
 
 function Form({ inputs, validationSchema, type }) {
@@ -10,6 +11,8 @@ function Form({ inputs, validationSchema, type }) {
     const { register, handleSubmit, formState } = useForm({
         resolver: yupResolver(validationSchema),
     });
+
+    const [ formErrors, setFormErrors ] = useState();
     
     const { errors } = formState;
     
@@ -23,14 +26,23 @@ function Form({ inputs, validationSchema, type }) {
             return null
         })
         
-        axios.post('http://localhost:4000/' + type, add)
+        axios.post('http://localhost:4000/' + type, add,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
             .then(response => {
-                console.log('Add effectué !')
-                document.getElementById("add").innerHTML += "<div style='color: green;' class='error'> Votre inscription a bien été prise en compte !</div>"
+                setFormErrors("Votre inscription a bien été prise en compte !")
+                document.getElementById("formErrors").classList.add("text-success")
+                document.getElementById("formErrors").classList.remove("text-danger")
             })
             .catch(err => {
-                console.log(err)
-                document.getElementById("add").innerHTML += "<div style='color: red;' class='error'> " + err.response.data + "</div>"
+                var dom = document.createElement('div')
+                dom.innerHTML = err.response.data
+                setFormErrors(dom.lastChild.data)
+                document.getElementById("formErrors").classList.add("text-danger")
+                document.getElementById("formErrors").classList.remove("text-success")
             })
     }
   
@@ -108,6 +120,7 @@ function Form({ inputs, validationSchema, type }) {
                             </button>
                             <Link to="/" className="btn btn-danger text-decoration-none text-white">Retour</Link>
                         </div>
+                        <div id="formErrors">{formErrors}</div>
                     </form>
                 </div>
             </div>
