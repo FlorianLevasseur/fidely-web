@@ -29,7 +29,7 @@ const Home = () => {
 
   return (
     <div id="home">
-      {sessionStorage.getItem("token") != null ? <div>Bonjour {sessionStorage.getItem("firstname")} <button type="submit" onClick={deconnexion}>Déconnexion</button></div> : ""}
+      {sessionStorage.getItem("token") != null ? <div id="login">Bonjour <b>{sessionStorage.getItem("firstname")}</b> <button type="submit" className="btn btn-primary" onClick={deconnexion}>Déconnexion</button></div> : ""}
       <div id="hero">
         <div id="heroLeft">
           <img src={logo} width="400px" />
@@ -42,7 +42,7 @@ const Home = () => {
       </div>
       <div id="introduction">
         <h2><u>Qui sommes nous ?</u></h2>
-        <p class="enTete"><b>Fidely</b> c’est une application mobile à destination des petits et moyens commerces et de leurs clients. Notre volonté : rapprocher commerçants et clients et faciliter la communication. En offrant aux commerçants la possibilité d’être souple et de communiquer activement sur une cible sûre. Pour les clients, nous centralisons toutes les cartes de fidélités dans un seul portefeuille virtuel, pour ne plus jamais perdre ses cartes ou se retrouver avec six fois la même. Oui oui, on connaît 🤪</p>
+        <p className="enTete"><b>Fidely</b> c’est une application mobile à destination des petits et moyens commerces et de leurs clients. Notre volonté : rapprocher commerçants et clients et faciliter la communication. En offrant aux commerçants la possibilité d’être souple et de communiquer activement sur une cible sûre. Pour les clients, nous centralisons toutes les cartes de fidélités dans un seul portefeuille virtuel, pour ne plus jamais perdre ses cartes ou se retrouver avec six fois la même. Oui oui, on connaît 🤪</p>
         <div id="sub">
           <div id="subUser">
             <p><b>En tant que client,</b><br></br>Vous pouvez suivre l’activité de vos commerçes favoris et être alerté dès que ceux-ci proposent une offre, une promotion ou une nouveauté&nbsp;!<br></br>Cumulez vos points de fidélités&nbsp;: que ce soit chez votre coiffeur, votre boulanger, votre maraîcher et vos restaurants préférés. Tout ça en même temps, dans une seule application&nbsp;!<br></br><br></br>Surveillez vos point et obtenez des récompenses sans plus jamais perdre vos cartes papier ou sans en prendre une nouvelle à chaque fois. En plus, pas de date de péremption des points, donc profitez sur la durée de votre fidélité grâce à des systèmes d'avantages personnalisés par vos commerçants favoris&nbsp;!</p>
@@ -52,12 +52,12 @@ const Home = () => {
             <p><b>En tant que commerçant,</b><br></br>Vous pouvez vous inscrire sur notre plateforme et proposer votre propre système de fidélité avec vos propres récompenses. Personnalisez votre offre de fidélité au maximum. Gagnez en visibilité locale grâce à notre système de mise en avant. Vous pouvez alerter vos clients de vos nouveautés et proposer des promotions directement sur notre application. Vos clients reçevrons des notifications directement sur leurs téléphones.<br></br><br></br>Suivez également votre activité et surveillez ce que votre système de fidélité vous rapporte comme bénéfice. Profitez de nos conseils pour optimiser votre système de fidélité pour attirer un maximum vos clients. Tout ça sans payer quoi que ce soit&nbsp;!</p>
             <Link to="/subscriptionStore" className="btn btn-primary text-decoration-none text-white">Inscription Commerce</Link>
           </div>
+        </div>
           <div className="m-5">
             <Link to="/connexion" className="btn btn-primary text-decoration-none text-white">Connexion</Link>
           </div>
-        </div>
       </div>
-      <div>
+      <div id="partners">
         {stores?.map((store) =>
           <div key={store.name}>
             <img src={defaultLogo} width="20rem" />

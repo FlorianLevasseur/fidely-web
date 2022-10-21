@@ -1,5 +1,13 @@
 body {
     #home {
+        #login {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 30px;
+            background-color: #ffffff00;
+            color: white;
+        }
         #hero {
             height: 100vh;
             background-image: url(../assets/background.jpg);
@@ -104,6 +112,24 @@ body {
                 }
             }
 
+        }
+        #partners {
+            padding: 0 7.5% 2.5% 7.5%;
+            display: flex;
+            justify-content: space-around;
+
+            img {
+                width: 7.5vw;
+                padding: 10px;
+                margin-bottom: 0.5rem;
+                border-radius: 20px;
+                background: #c9c9c9;
+            }
+            p {
+                font-size: 0.8rem;
+                text-align: center;
+                font-weight: 600;
+            }
         }
     }
 }
