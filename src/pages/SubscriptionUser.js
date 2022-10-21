@@ -83,15 +83,17 @@ const SubscriptionUser = () => {
     });
 
     return (
-        <div id='hero'>
-            <div id='leftHero'>
-                <img src={logo} width="400px"></img>
-                <h1>La carte qui vous relie à vos commerçants !</h1>
-                <p>Fidely est un portefeuille de carte de fidélités qui vous permet de toujours avoir sur vous toutes vos cartes. Avec Fidely, les cartes de fidélités perdues, c’est finis&nbsp;!</p>
-                <button>En savoir plus </button>
-            </div>
-            <div id='rightHero'>
-                <Form inputs={inputsClient} validationSchema={validationSchema} type="users" />
+        <div id="subscription">
+            <div id='hero'>
+                <div id='leftHero'>
+                    <img src={logo} width="400px"></img>
+                    <h1>La carte qui vous relie à vos commerçants !</h1>
+                    <p>Fidely est un portefeuille de carte de fidélités qui vous permet de toujours avoir sur vous toutes vos cartes. Avec Fidely, les cartes de fidélités perdues, c’est finis&nbsp;!</p>
+                    <button>En savoir plus </button>
+                </div>
+                <div id='rightHero'>
+                    <Form inputs={inputsClient} validationSchema={validationSchema} type="users" />
+                </div>
             </div>
         </div>
     )
