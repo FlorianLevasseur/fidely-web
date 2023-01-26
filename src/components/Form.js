@@ -15,7 +15,7 @@ function Form({ inputs, validationSchema, type }) {
   const { errors } = formState;
 
   const onSubmit = (data) => {
-    console.log(data);
+    data.email = data.email.toLowerCase();
     const add = {};
     inputs.map((input) => {
       if (input.apiName) {
