@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import defaultLogo from "../assets/fast-food.png";
+// import defaultLogo from "../assets/fast-food.png";
 import logo from "../assets/logo-white.png";
 import placeholder from "../assets/placeholder.png";
 import "../styles/Home.scss";
 import Footer from "../components/Footer";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from "swiper";
+import 'swiper/css';
 
 const Home = () => {
   const [stores, setStores] = useState();
@@ -46,7 +49,7 @@ const Home = () => {
       )}
       <div id="hero">
         <div id="heroLeft">
-          <img src={logo} width="400px" />
+          <img src={logo} width="400px" alt="logo Fidely"/>
           <h1>
             Le portefeuille de cartes de fidélités numérique qui vous facilite
             la vie&nbsp;!
@@ -58,7 +61,7 @@ const Home = () => {
           </p>
         </div>
         <div id="heroRight">
-          <img src={placeholder} width="75%" />
+          <img src={placeholder} width="75%" alt="écran Fidely" />
         </div>
       </div>
       <div id="introduction">
@@ -133,12 +136,27 @@ const Home = () => {
         </div>
       </div>
       <div id="partners">
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={50}
+          slidesPerView={4}
+          loop={true}
+          autoplay={{
+            delay:1500,
+            disableOnInteraction: false,
+          }}
+        >
         {stores?.map((store) => (
-          <div key={store.name}>
-            <img src={defaultLogo} width="20rem" />
-            <p>{store.name}</p>
-          </div>
+          <SwiperSlide
+            key={store.id}
+          >
+            <div> 
+              <img src={require('../assets/' + store.store_type + '.png')} width="20rem" alt={store.store_type}/>
+              <p>{store.name}</p>
+            </div>
+          </SwiperSlide>
         ))}
+        </Swiper>
       </div>
       <Footer></Footer>
     </div>

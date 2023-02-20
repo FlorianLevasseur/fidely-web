@@ -118,17 +118,20 @@ body {
             display: flex;
             justify-content: space-around;
 
-            img {
-                width: 7.5vw;
-                padding: 10px;
-                margin-bottom: 0.5rem;
-                border-radius: 20px;
-                background: #c9c9c9;
-            }
-            p {
-                font-size: 0.8rem;
+            .swiper-wrapper {
                 text-align: center;
-                font-weight: 600;
+                img {
+                    width: 7.5vw;
+                    padding: 10px;
+                    margin-bottom: 0.5rem;
+                    border-radius: 20px;
+                    background: #c9c9c9;
+                }
+                p {
+                    font-size: 0.8rem;
+                    text-align: center;
+                    font-weight: 600;
+                }
             }
         }
     }

@@ -136,7 +136,7 @@ const SubscriptionStore = () => {
     <div id="subscription">
       <div id="hero">
         <div id="leftHero">
-          <img src={logo} width="400px"></img>
+          <img src={logo} width="400px" alt="logo Fidely"></img>
           <h1>L'appli qui vous relie à vos clients !</h1>
           <p>
             Fidely vous permet de faire parti d'un réseau de commerçants locaux.
