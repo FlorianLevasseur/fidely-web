@@ -43,13 +43,13 @@ const Connexion = () => {
         navigate("/");
       })
       .catch((err) => {
-        var dom = document.createElement("div");
-        dom.innerHTML = err.response.data;
-        setFormErrors(dom.lastChild.data);
+        // var dom = document.createElement("div");
+        // dom.innerHTML = err.response.data;
+        // setFormErrors(dom.lastChild.data);
+        setFormErrors('Email ou mot de passe incorrect')
       });
   };
 
-  console.log(formErrors);
   return (
     <div id="connexions">
       <div id="modale">
@@ -81,10 +81,10 @@ const Connexion = () => {
             ></input>
             <small className="text-danger">{errors["password"]?.message}</small>
           </div>
+          <div className="text-danger">{formErrors}</div>
           <button type="submit" className="btn btn-primary">
             Connexion
           </button>
-          <div className="text-danger">{formErrors}</div>
           <Link
             to="/"
             className="btn btn-danger text-decoration-none text-white"
