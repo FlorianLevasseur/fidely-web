@@ -18,6 +18,29 @@ body {
             display: flex;
             color: white;
 
+            .gif {
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                width: auto;
+                animation-name: mainAnimation;
+                animation-duration: 3.2s;
+                animation-delay: 0.25s;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes mainAnimation {
+                 90% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+
             #heroLeft {
                 width: 60vw;
                 height: 100vh;
@@ -27,55 +50,62 @@ body {
                 align-items: left;
                 flex-direction: column;
 
-                @keyframes slideTop {
-                    0%   {top: -100%;}
-                    70% {top: 24%;}
-                    100% {top: 0%;}
-                  }
+                @keyframes slideLefts {
+                    0% {transform: translateX(-850px);}
+                    50% {transform: translateX(40px);}
+                    80% {transform: translateX(-8px);}
+                    100% {transform: translateX(0);}
+                }
                   @keyframes apear {
                     0% {width: 0px;}
+                    80% {width: 450px;}
                     100% {width: 400px;}
                   }
                 img {
                     position: relative;
-                    animation: apear 3.33s ease;
-                    animation-duration: 0.8s;
+                    animation: slideLefts ease;
+                    animation-duration: 2.5s;
                     animation-fill-mode: both;
-                }
-                p {
-                    position: relative;
-                    font-size: 24px;
-                    font-weight: 400;
-                    line-height: 1.75rem;
-                    animation: slideTop 1.33s ease;
-                    animation-duration: 0.59s;
-                    animation-delay: 1.23s;
-                    animation-fill-mode: both;
-                }
+                    animation-delay: 3.75s;  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                } 
                 h1 {
                     position: relative;
                     font-size: 32px;
                     font-weight: 700;
-                    animation: slideTop 1.33s ease;
-                    animation-duration: 0.75s;
-                    animation-delay: 0.55s;
+                    animation: slideLefts ease;
+                    animation-duration: 2.5s;
+                    animation-delay: 4s; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    animation-fill-mode: both;
+                    margin: 10px 0;
+                }
+                p {
+                    position: relative;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 1.75rem;
+                    animation: slideLefts ease;
+                    animation-duration: 2.5s;
+                    animation-delay: 4.25s;  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     animation-fill-mode: both;
                 }
+               
             }
             #heroRight {
                 width: 40vw;
                 justify-self: center;
                 align-self: center;
                 
-                @keyframes slideRight {
-                    from {right: -150%;}
-                    70% {right: 10%;}
-                    to {right: 0%;}
-                }
                 img {
                     position: relative;
-                    animation: slideRight 1.33s ease;
-                    animation-fill-mode: both;
+                    animation: slideRight 3.5s ease;
+                    animation-fill-mode: backwards;
+                    animation-delay: 4.5s;
+                }
+                @keyframes slideRight {
+                    0% {transform: translateX(700px);}
+                    50% {transform: translateX(-40px);}
+                    80% {transform: translateX(20px);}
+                    100% {transform: translateX(0);}
                 }
             }
 
@@ -135,4 +165,11 @@ body {
             }
         }
     }
+}
+
+[data-animation] {
+    animation:
+    var(--animn, none)
+    var(--animdur, 1s)
+    var(--animtf, linear)
 }

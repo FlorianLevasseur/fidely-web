@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 // import defaultLogo from "../assets/fast-food.png";
 import logo from "../assets/logo-white.png";
 import placeholder from "../assets/placeholder.png";
+import gif from "../assets/Fidely.gif";
 import "../styles/Home.scss";
 import Footer from "../components/Footer";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
-import 'swiper/css';
+import "swiper/css";
 
 const Home = () => {
   const [stores, setStores] = useState();
@@ -48,8 +49,9 @@ const Home = () => {
         ""
       )}
       <div id="hero">
+        <img src={gif} class="gif" alt="Logo animé Fidely"></img>
         <div id="heroLeft">
-          <img src={logo} width="400px" alt="logo Fidely"/>
+          <img src={logo} width="400px" alt="logo Fidely" />
           <h1>
             Le portefeuille de cartes de fidélités numérique qui vous facilite
             la vie&nbsp;!
@@ -69,30 +71,29 @@ const Home = () => {
           <u>Qui sommes nous ?</u>
         </h2>
         <p className="enTete">
-          <b>Fidely</b> c’est une application mobile à destination des petits et
-          moyens commerces et de leurs clients. Notre volonté : rapprocher
-          commerçants et clients et faciliter la communication. En offrant aux
-          commerçants la possibilité d’être souple et de communiquer activement
-          sur une cible sûre. Pour les clients, nous centralisons toutes les
-          cartes de fidélités dans un seul portefeuille virtuel, pour ne plus
-          jamais perdre ses cartes ou se retrouver avec six fois la même. Oui
-          oui, on connaît 🤪
+          <b>Fidely</b> est une application mobile destinée aux petits et moyens
+          commerces ainsi qu'à leurs clients. Notre objectif : rapprocher les
+          commerçants et les clients et faciliter la communication en offrant
+          aux commerçants la possibilité de communiquer activement avec une
+          cible sûre et flexible. Pour les clients, nous centralisons toutes les
+          cartes de fidélité dans un seul portefeuille virtuel, afin qu'ils ne
+          perdent plus jamais leurs cartes ou qu'ils n'en aient plus six
+          identiques. Oui oui, nous aussi on connaît ça 🤪
         </p>
         <div id="sub">
           <div id="subUser">
             <p>
               <b>En tant que client,</b>
-              <br></br>Vous pouvez suivre l’activité de vos commerçes favoris et
-              être alerté dès que ceux-ci proposent une offre, une promotion ou
-              une nouveauté&nbsp;!<br></br>Cumulez vos points de
-              fidélités&nbsp;: que ce soit chez votre coiffeur, votre boulanger,
-              votre maraîcher et vos restaurants préférés. Tout ça en même
-              temps, dans une seule application&nbsp;!<br></br>
-              <br></br>Surveillez vos point et obtenez des récompenses sans plus
-              jamais perdre vos cartes papier ou sans en prendre une nouvelle à
-              chaque fois. En plus, pas de date de péremption des points, donc
-              profitez sur la durée de votre fidélité grâce à des systèmes
-              d'avantages personnalisés par vos commerçants favoris&nbsp;!
+              <br></br>Vous pouvez suivre l'activité de vos commerces favoris et
+              être alerté dès qu'ils proposent une offre, une promotion ou une
+              nouveauté ! Cumulez vos points de fidélité chez votre coiffeur,
+              votre boulanger, votre maraîcher et vos restaurants préférés. Tout
+              cela en même temps, dans une seule application !<br></br>
+              <br></br>Surveillez vos points et obtenez des récompenses sans
+              plus jamais perdre vos cartes papier ou en prendre une nouvelle à
+              chaque fois. De plus, il n'y a pas de date d'expiration des
+              points, donc profitez de votre fidélité sur la durée grâce à des
+              systèmes d'avantages personnalisés par vos commerçants favoris !
             </p>
             <Link
               to="/subscriptionUser"
@@ -110,13 +111,14 @@ const Home = () => {
               Gagnez en visibilité locale grâce à notre système de mise en
               avant. Vous pouvez alerter vos clients de vos nouveautés et
               proposer des promotions directement sur notre application. Vos
-              clients reçevrons des notifications directement sur leurs
-              téléphones.<br></br>
+              clients recevront des notifications directement sur leurs
+              téléphones.
+              <br></br>
               <br></br>Suivez également votre activité et surveillez ce que
-              votre système de fidélité vous rapporte comme bénéfice. Profitez
-              de nos conseils pour optimiser votre système de fidélité pour
-              attirer un maximum vos clients. Tout ça sans payer quoi que ce
-              soit&nbsp;!
+              votre système de fidélité vous rapporte comme bénéfices. Profitez
+              de nos conseils pour optimiser votre système de fidélité et
+              attirer un maximum de clients. Tout cela sans payer quoi que ce
+              soit !
             </p>
             <Link
               to="/subscriptionStore"
@@ -137,25 +139,28 @@ const Home = () => {
       </div>
       <div id="partners">
         <Swiper
+          grabCursor={true}
           modules={[Autoplay]}
-          spaceBetween={50}
+          // spaceBetween={50}
           slidesPerView={4}
           loop={true}
           autoplay={{
-            delay:1500,
+            delay: 1500,
             disableOnInteraction: false,
           }}
         >
-        {stores?.map((store) => (
-          <SwiperSlide
-            key={store.id}
-          >
-            <div> 
-              <img src={require('../assets/' + store.store_type + '.png')} width="20rem" alt={store.store_type}/>
-              <p>{store.name}</p>
-            </div>
-          </SwiperSlide>
-        ))}
+          {stores?.map((store) => (
+            <SwiperSlide key={store.id}>
+              <div>
+                <img
+                  src={require("../assets/" + store.store_type + ".png")}
+                  width="20rem"
+                  alt={store.store_type}
+                />
+                <p>{store.name}</p>
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <Footer></Footer>
