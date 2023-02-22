@@ -42,27 +42,27 @@ const SubscriptionStore = () => {
       options: [
         {
           id: 51,
-          name: "Restaurant",
+          name: "restaurant",
         },
         {
           id: 52,
-          name: "Fast-food",
+          name: "fast-food",
         },
         {
           id: 53,
-          name: "Boulangerie",
+          name: "boulangerie",
         },
         {
           id: 54,
-          name: "Librairie",
+          name: "librairie",
         },
         {
           id: 55,
-          name: "Fleuriste",
+          name: "fleuriste",
         },
         {
           id: 56,
-          name: "Primeur",
+          name: "primeur",
         },
       ],
     },
