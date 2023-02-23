@@ -33,6 +33,11 @@ const Home = () => {
     window.location.reload(false);
   }
 
+  setTimeout(function () {
+    var element = document.getElementById("gifAnim");
+    element.parentNode.removeChild(element);
+  }, 3050);
+
   return (
     <div id="home">
       {sessionStorage.getItem("token") != null ? (
@@ -52,7 +57,7 @@ const Home = () => {
         ""
       )}
       <div id="hero">
-        <img src={gif} class="gif" alt="Logo animé Fidely"></img>
+        <img src={gif} class="gif" alt="Logo animé Fidely" id="gifAnim"></img>
         <div id="heroLeft">
           <img src={logo} width="400px" alt="logo Fidely" />
           <h1>

@@ -9,6 +9,8 @@ body {
             color: white;
         }
         #hero {
+            box-sizing: border-box;
+            overflow-x: hidden;
             height: 100vh;
             background-image: url(../assets/background.jpg);
             background-repeat: no-repeat;
