@@ -3,7 +3,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 // import defaultLogo from "../assets/fast-food.png";
 import logo from "../assets/logo-white.png";
-import placeholder from "../assets/placeholder.png";
+// import placeholder from "../assets/placeholder.png";
+import placeholder from "../assets/Fidely_Mockup.png";
 import gif from "../assets/Fidely.gif";
 import "../styles/Home.scss";
 import Footer from "../components/Footer";
@@ -63,7 +64,7 @@ const Home = () => {
           </p>
         </div>
         <div id="heroRight">
-          <img src={placeholder} width="75%" alt="écran Fidely" />
+          <img src={placeholder} width="90%" alt="écran Fidely" />
         </div>
       </div>
       <div id="introduction">
