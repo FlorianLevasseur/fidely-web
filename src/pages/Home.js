@@ -37,7 +37,9 @@ const Home = () => {
     <div id="home">
       {sessionStorage.getItem("token") != null ? (
         <div id="login">
-          Bonjour <b>{sessionStorage.getItem("firstname")}</b>{" "}
+          <p>
+            Bonjour <b>{sessionStorage.getItem("firstname")}</b>{" "}
+          </p>
           <button
             type="submit"
             className="btn btn-primary"
@@ -129,7 +131,10 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="m-5">
+        <div id="connexion">
+          <p>
+            <b>J'ai déjà un compte,</b> je me connecte :
+          </p>
           <Link
             to="/connexion"
             className="btn btn-primary text-decoration-none text-white"

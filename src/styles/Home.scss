@@ -25,7 +25,7 @@ body {
                 left: 50%;
                 width: auto;
                 animation-name: mainAnimation;
-                animation-duration: 3.2s;
+                animation-duration: 2.65s;
                 animation-delay: 0.25s;
                 animation-iteration-count: 1;
                 animation-timing-function: ease-in;
@@ -51,7 +51,7 @@ body {
                 flex-direction: column;
 
                 @keyframes slideLefts {
-                    0% {transform: translateX(-850px);}
+                    0% {transform: translateX(-100vw);}
                     50% {transform: translateX(40px);}
                     80% {transform: translateX(-8px);}
                     100% {transform: translateX(0);}
@@ -64,17 +64,17 @@ body {
                 img {
                     position: relative;
                     animation: slideLefts ease;
-                    animation-duration: 2.5s;
+                    animation-duration: 1.75s;
                     animation-fill-mode: both;
-                    animation-delay: 3.75s;  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    animation-delay: 2.55s;  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 } 
                 h1 {
                     position: relative;
                     font-size: 32px;
                     font-weight: 700;
                     animation: slideLefts ease;
-                    animation-duration: 2.5s;
-                    animation-delay: 4s; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    animation-duration: 1.75s;
+                    animation-delay: 2.8s; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     animation-fill-mode: both;
                     margin: 10px 0;
                 }
@@ -84,8 +84,8 @@ body {
                     font-weight: 400;
                     line-height: 1.75rem;
                     animation: slideLefts ease;
-                    animation-duration: 2.5s;
-                    animation-delay: 4.25s;  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    animation-duration: 1.75s;
+                    animation-delay: 3s;  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     animation-fill-mode: both;
                 }
                
@@ -97,14 +97,14 @@ body {
                 
                 img {
                     position: relative;
-                    animation: slideRight 3.5s ease;
+                    animation: slideRight 3.25s ease;
                     animation-fill-mode: backwards;
-                    animation-delay: 4.5s;
+                    animation-delay: 2.5s;
                 }
                 @keyframes slideRight {
-                    0% {transform: translateX(700px);}
-                    50% {transform: translateX(-40px);}
-                    80% {transform: translateX(20px);}
+                    0% {transform: translateX(100vw);}
+                    60% {transform: translateX(-40px);}
+                    82% {transform: translateX(8px);}
                     100% {transform: translateX(0);}
                 }
             }
@@ -116,6 +116,7 @@ body {
             flex-direction: column;
             padding: 0 7.5% 5% 7.5%;
 
+            
             .enTete {
                 padding-bottom: 3rem;
             }
@@ -123,6 +124,10 @@ body {
                 color: #0e6df0;
                 font-size: 32px;
                 font-weight: 700;
+            }
+            #connexion {
+                margin-top: 75px;
+                text-align: center;
             }
             
             #sub {
@@ -132,13 +137,30 @@ body {
                     padding-bottom: 1.5rem;
                 }
                 #subUser {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     width: 50%;
+                    height: 350px;
                     padding-right: 3%;
+                    
+                    Link {
+                        position: relative;
+                        bottom: 0;
+                    }
                 }
                 #subStore {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                     width: 50%;
+                    height: 350px;
                     padding-left: 3%;
-
+                    
+                    Link {
+                        position: relative;
+                        bottom: 0;
+                    }
                 }
             }
 
