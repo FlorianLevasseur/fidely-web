@@ -103,12 +103,6 @@ const Home = () => {
               points, donc profitez de votre fidélité sur la durée grâce à des
               systèmes d'avantages personnalisés par vos commerçants favoris !
             </p>
-            <Link
-              to="/subscriptionUser"
-              className="btn btn-primary text-decoration-none text-white"
-            >
-              Inscription Client
-            </Link>
           </div>
           <div id="subStore">
             <p>
@@ -128,13 +122,22 @@ const Home = () => {
               attirer un maximum de clients. Tout cela sans payer quoi que ce
               soit !
             </p>
-            <Link
-              to="/subscriptionStore"
-              className="btn btn-primary text-decoration-none text-white"
-            >
-              Inscription Commerce
-            </Link>
           </div>
+        </div>
+        <div id="subButtons">
+          <Link
+            id="subBtn1"
+            to="/subscriptionUser"
+            className="btn btn-primary text-decoration-none text-white"
+          >
+            Inscription Client
+          </Link>
+          <Link
+            to="/subscriptionStore"
+            className="btn btn-primary text-decoration-none text-white"
+          >
+            Inscription Commerce
+          </Link>
         </div>
         <div id="connexion">
           <p>

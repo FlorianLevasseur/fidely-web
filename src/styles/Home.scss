@@ -135,35 +135,21 @@ body {
             #sub {
                 display: flex;
                 flex-direction: row;
-                p{
-                    padding-bottom: 1.5rem;
-                }
+                padding-bottom: 20px;
                 #subUser {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
                     width: 50%;
-                    height: 350px;
                     padding-right: 3%;
-                    
-                    Link {
-                        position: relative;
-                        bottom: 0;
-                    }
                 }
                 #subStore {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
                     width: 50%;
-                    height: 350px;
                     padding-left: 3%;
-                    
-                    Link {
-                        position: relative;
-                        bottom: 0;
-                    }
                 }
+            }
+            #subButtons {
+                display: flex;
+                flex-direction: row;
+                gap: 6%;
+
             }
 
         }
