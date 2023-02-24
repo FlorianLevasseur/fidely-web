@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // import defaultLogo from "../assets/fast-food.png";
 import logo from "../assets/logo-white.png";
 // import placeholder from "../assets/placeholder.png";
-import placeholder from "../assets/Fidely_Mockup.png";
+import placeholder from "../assets/Fidely_Mockup_V2-400.png";
 import gif from "../assets/Fidely.gif";
 import "../styles/Home.scss";
 import Footer from "../components/Footer";

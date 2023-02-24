@@ -54,15 +54,9 @@ body {
 
                 @keyframes slideLefts {
                     0% {transform: translateX(-100vw);}
-                    50% {transform: translateX(40px);}
-                    80% {transform: translateX(-8px);}
+                    70% {transform: translateX(40px);}
                     100% {transform: translateX(0);}
                 }
-                  @keyframes apear {
-                    0% {width: 0px;}
-                    80% {width: 450px;}
-                    100% {width: 400px;}
-                  }
                 img {
                     position: relative;
                     animation: slideLefts ease;
@@ -99,14 +93,20 @@ body {
                 
                 img {
                     position: relative;
-                    animation: slideRight 3.25s ease;
+                    animation: slideRight 2.55s ease;
                     animation-fill-mode: backwards;
-                    animation-delay: 2.5s;
+                    animation-delay: 2.35s;
                 }
+                // @keyframes slideRight {
+                //     0% {transform: translateX(100vw);}
+                //     60% {transform: translateX(-40px);}
+                //     82% {transform: translateX(6px);}
+                //     100% {transform: translateX(0);}
+                // }
                 @keyframes slideRight {
-                    0% {transform: translateX(100vw);}
-                    60% {transform: translateX(-40px);}
-                    82% {transform: translateX(8px);}
+                    0% {transform: translateX(250vw);}
+                    68% {transform: translateX(-70px);}
+                    // 82% {transform: translateX(8px);}
                     100% {transform: translateX(0);}
                 }
             }
