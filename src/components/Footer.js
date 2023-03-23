@@ -4,12 +4,11 @@ import "../styles/Footer.scss"
 
 function Footer(){
     return (
-        <div id="footer">
+        <div id="footer" data-testid="footer">
             <Link to="/"><img src={logo} alt="logo Fidely" width="10%" /></Link>
             <p>Notre politique de confidentialité</p>
         </div>
     )
-    
 }
 
 export default Footer
