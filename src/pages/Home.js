@@ -28,6 +28,17 @@ const Home = () => {
 
   console.log(stores);
 
+  const span = document.querySelector(".switch-word");
+  const words = ["clients", "commerçants"];
+  let currentWordIndex = 0;
+
+  function switchWord() {
+    span.textContent = words[currentWordIndex];
+    currentWordIndex = (currentWordIndex + 1) % words.length;
+  }
+
+  setInterval(switchWord, 3500);
+
   function deconnexion() {
     sessionStorage.clear();
     window.location.reload(false);
@@ -61,13 +72,14 @@ const Home = () => {
         <div id="heroLeft">
           <img src={logo} width="400px" alt="logo Fidely" />
           <h1>
-            Le portefeuille de cartes de fidélités numérique qui vous facilite
-            la vie&nbsp;!
+            La carte qui vous relie à vos <span class="switch-word"></span>
           </h1>
+          <div class="box"></div>
           <p>
-            Fidely est un portefeuille de carte de fidélités qui vous permet de
-            toujours avoir sur vous toutes vos cartes. Avec Fidely, les cartes
-            fidélités perdues, c’est finis&nbsp;!
+            Faites partie de la révolution de la fidélité avec Fidely ! Adoptez
+            gratuitement notre portefeuille numérique de cartes de fidélité et
+            profitez d'un système de fidélité personnalisé par vos commerces de
+            proximité préférés&nbsp;!
           </p>
         </div>
         <div id="heroRight">

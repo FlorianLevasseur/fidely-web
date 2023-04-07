@@ -62,26 +62,29 @@ body {
                     animation: slideLefts ease;
                     animation-duration: 1.75s;
                     animation-fill-mode: both;
-                    animation-delay: 2.55s;  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    animation-delay: 2.55s;  
                 } 
+            
                 h1 {
                     position: relative;
-                    font-size: 32px;
+                    font-size: 26px;
                     font-weight: 700;
                     animation: slideLefts ease;
                     animation-duration: 1.75s;
-                    animation-delay: 2.8s; //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    animation-delay: 2.8s; 
                     animation-fill-mode: both;
-                    margin: 10px 0;
+                    margin: 30px 0 10px 0;
                 }
+                  
+                  
                 p {
                     position: relative;
                     font-size: 20px;
                     font-weight: 400;
-                    line-height: 1.75rem;
+                    // line-height: 1.75rem;
                     animation: slideLefts ease;
                     animation-duration: 1.75s;
-                    animation-delay: 3s;  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    animation-delay: 3s;  
                     animation-fill-mode: both;
                 }
                
@@ -177,9 +180,25 @@ body {
     }
 }
 
-[data-animation] {
-    animation:
-    var(--animn, none)
-    var(--animdur, 1s)
-    var(--animtf, linear)
-}
+  
+
+.switch-word {
+    animation: fade-in-out 3500ms infinite;
+    transition: 0.5s;
+  }
+  
+  @keyframes fade-in-out {
+    0%, 10% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    20%,80% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    90%, 100% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+  }
+  
