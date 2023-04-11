@@ -8,8 +8,31 @@ body {
 
         color: white;
 
-        p {
+        img {
+            width: 10%;
+        }
 
+        p {
+            color: #fff;
+            &:hover {
+                color: #ececec;
+                text-decoration-color: white;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    body{
+        #footer{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            img {
+                width: 100px;
+            }
+            p {
+                font-size: 10px;
+            }
         }
     }
 }

@@ -68,11 +68,11 @@ const Home = () => {
         ""
       )}
       <div id="hero">
-        <img src={gif} class="gif" alt="Logo animé Fidely" id="gifAnim"></img>
+        <img src={gif} alt="Logo animé Fidely" id="gifAnim"></img>
         <div id="heroLeft">
           <img src={logo} width="400px" alt="logo Fidely" />
           <h1>
-            La carte qui vous relie à vos <span class="switch-word"></span>
+            L'appli qui vous relie à vos <span class="switch-word"></span>
           </h1>
           <div class="box"></div>
           <p>
@@ -83,7 +83,7 @@ const Home = () => {
           </p>
         </div>
         <div id="heroRight">
-          <img src={placeholder} width="90%" alt="écran Fidely" />
+          <img src={placeholder} alt="Application Fidely" />
         </div>
       </div>
       <div id="introduction">
