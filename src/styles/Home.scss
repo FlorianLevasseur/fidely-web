@@ -209,30 +209,52 @@ body {
     body {
       #home {
         #hero {
-            display: flex;
                 flex-direction: column;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            // overflow-y: hidden;
+            // height: 100vh;
+            background-image: url(../assets/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:  top;
+            margin-bottom: 3rem;
+            display: flex;
+            color: white;
+    
 
             #gifAnim {
+              // position: relative;
+              transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
                 width: 130vw;
+                animation-name: mainAnimation;
+                animation-duration: 2.65s;
+                animation-delay: 0.25s;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in;
+                animation-fill-mode: forwards;
             }
           #heroLeft {
             width: 100vw;
-            height: auto;
-            padding: 7.5vw 10vw;
+            // height: auto;
+            padding: 7.5vw 10vw 0 10vw ;
             display: flex;
             justify-content: flex-start;
             align-items: center;
             align-items: center;
             img {
-              width: 80%;
+              width: 70%;
               margin: 0 auto;
             }
             h1 {
               font-size: 30px;
-              margin: 35px 0 10px 0;
+              margin: 20px 0 10px 0;
             }
             p {
               font-size: 16px;
+              line-height: 18px;
               margin: 0;
             }
           }

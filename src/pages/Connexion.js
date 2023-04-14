@@ -46,7 +46,7 @@ const Connexion = () => {
         // var dom = document.createElement("div");
         // dom.innerHTML = err.response.data;
         // setFormErrors(dom.lastChild.data);
-        setFormErrors('Email ou mot de passe incorrect')
+        setFormErrors("Email ou mot de passe incorrect");
       });
   };
 

@@ -64,6 +64,18 @@ const SubscriptionStore = () => {
           id: 56,
           name: "primeur",
         },
+        {
+          id: 57,
+          name: "boucherie",
+        },
+        {
+          id: 58,
+          name: "coiffeur",
+        },
+        {
+          id: 59,
+          name: "prêt-à-porter",
+        },
       ],
     },
     {
@@ -136,11 +148,11 @@ const SubscriptionStore = () => {
     <div id="subscription">
       <div id="hero">
         <div id="leftHero">
-          <img src={logo} width="400px" alt="logo Fidely"></img>
+          <img src={logo} alt="logo Fidely"></img>
           <h1>L'appli qui vous relie à vos clients !</h1>
           <p>
             Fidely vous permet de faire parti d'un réseau de commerçants locaux.
-            Grâce à nous multipliez vos client et récompensez leur
+            Grâce à nous, multipliez vos clients et récompensez leur
             fidélité&nbsp;!
           </p>
           <button>En savoir plus </button>

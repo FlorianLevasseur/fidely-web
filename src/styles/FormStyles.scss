@@ -8,15 +8,15 @@
         #subscription {
             height: 100%;
             width: 100%;
-            background-image:  url(../assets/background.jpg);
+            background-image: url(../assets/background.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            background-position:  top;
+            background-position: top;
             // background-attachment: fixed;
-
+    
             input {
                 color: #0e6df0 !important;
-                font-weight: 500!important;
+                font-weight: 500 !important;
                 box-shadow: inset 1px 3px 6px #0075FF33;
             }
             label {
@@ -24,24 +24,29 @@
             }
             #hero {
                 display: flex;
-                height: 100vh;
+                // height: 100vh;
                 overflow: hidden;
-
+    
                 #leftHero {
-                    width: 65vw;
-                    height: 100vh;
+                    width: 100%;
+                    height: 10’0vh; 
                     padding: 5vw 5vw 5vw 10vw;
                     display: flex;
                     justify-content: center;
                     align-items: left;
                     flex-direction: column;
-
+    
+                    img {
+                        width: 100%;
+                        max-width: 400px;
+                    }
+    
                     h1 {
                         color: #ffffff;
                         font-size: 30px;
                         font-weight: 700;
                         padding-top: 2rem;
-                        padding-bottom: 1rem;   
+                        padding-bottom: 1rem;
                     }
                     p {
                         color: #ffffff;
@@ -63,8 +68,8 @@
                     }
                 }
                 #rightHero {
-                    width: 35vw;
-                    height: 100%;
+                    width: 100%;
+                    height: 100vh; 
                     background-color: #ffffff80;
                     border-radius: 0 0 0 40px;
                     padding: 30px 45px;
@@ -72,9 +77,42 @@
                 }
             }
         }
-    }
+        
+        // Media Query pour le rendu responsive
+        @media screen and (max-width: 768px) {
+            #subscription {
+                #hero {
+                    flex-direction: column;
+                    #leftHero{
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%; 
+                        height: 100%;
 
-}
+                        img {
+                            width: 80%;
+                        }
+                        h1 {
+                            font-size: 24px;
+                        }
+                        p {
+                            font-size: 18px;
+                        }
+                        button {
+                            width: auto;
+                        }
+                    }
+                    #rightHero {
+                        width: 100%; 
+                        height: 100%;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}    
+
 .btn-primary {
     width: 100%;
 
@@ -108,3 +146,6 @@ input::placeholder {
     justify-content: space-between !important;
     align-items: center !important;
 }
+
+
+

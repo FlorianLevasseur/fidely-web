@@ -36,7 +36,6 @@ const Home = () => {
     span.textContent = words[currentWordIndex];
     currentWordIndex = (currentWordIndex + 1) % words.length;
   }
-
   setInterval(switchWord, 3500);
 
   function deconnexion() {
